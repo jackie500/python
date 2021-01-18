@@ -1,0 +1,3 @@
+mondat = input("ird be a mondatot: ")
+x = mondat.replace(" ", "")
+print(x)

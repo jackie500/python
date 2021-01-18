@@ -1,0 +1,63 @@
+# leggnagyobb szám vissza adása. 4 módszerrel:
+
+
+def maximum(*szamok):
+    largest = 0
+    for szam in szamok:
+        if szam > largest:
+            largest = szam
+    print(largest)
+
+n1 = int(input("n1:  "))
+n2 = int(input("n2:  "))
+n3 = int(input("n3:  "))
+maximum(n1, n2, n3)
+
+"""
+lista = []
+lista.append(int(input("n1:  ")))
+lista.append(int(input("n2:  ")))
+lista.append(int(input("n3:  ")))
+print(lista)
+
+lista.sort()
+print(lista[-1])
+
+"""
+"""
+lista = []
+lista.append(int(input("n1:  ")))
+lista.append(int(input("n2:  ")))
+lista.append(int(input("n3:  ")))
+
+largest = 0
+for i in lista:
+    if (i > largest):
+        largest = i
+print(largest)
+"""
+
+"""
+lista = []
+for i in range(3):
+    szam = int(input("szám: "))
+    lista.append(szam)
+print(max(lista))
+"""
+#vége---------------------------------------------------------
+
+
+
+#listábol a legnagyobb szám:
+
+lista = [5, 8, 20, 1, 9, 3, 6, 7]
+largest = 0
+for szam in lista:
+    if szam > largest:
+        largest = szam
+print("lista elemei: ", lista)
+print("a lista legnagyobb eleme: ", largest)
+print("a lista legnagyobb elemének indexe:", lista.index(largest))
+print("a lista legnagyobb elemének helye:", lista.index(largest)+1)
+
+#vége------------------------------------------------

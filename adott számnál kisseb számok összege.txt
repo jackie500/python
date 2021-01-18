@@ -1,0 +1,5 @@
+szam = int(input("szám: "))
+osszeg = 0
+for i in range(szam, 0, -1):
+    osszeg = osszeg + i
+print(osszeg)

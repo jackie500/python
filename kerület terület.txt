@@ -1,0 +1,50 @@
+
+# henger
+
+import math
+
+
+r = float(input("sugár: "))
+m = float(input("magasság: "))
+
+V = math.pi*r**2*m
+Ta = math.pi*r**2
+Tp = 2*math.pi*r*m
+A = 2*Ta + Tp
+d = 2*r
+
+print("Térfogat:", V)
+print("Alap terület:", Ta)
+print("Palást terület:", Tp)
+print("Felszín:", A)
+print("Átmérő:", d)
+
+# kocka
+
+import math
+
+a = float(input("a oldal hossza: "))
+
+V = a**3
+A = 6 * a**2
+D = a*math.sqrt(3)
+d = a*math.sqrt(2)
+
+print("Térfogat:", V)
+print("Fekszín:", A)
+print("Testátló:", D)
+print("oldalátló:", d)
+
+#négyzet
+
+import math
+
+a = float(input("a oldal hossza: "))
+
+T = a**2
+K = 4 * a
+
+print("Terület:", T)
+print("Kerület:", K)
+
+#vége-------------------------------------------

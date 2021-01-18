@@ -1,0 +1,4 @@
+szó = input("adjon meg egy szót: ")
+
+for i in range(len(szó)):
+    print(szó[i])

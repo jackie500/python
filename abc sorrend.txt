@@ -1,0 +1,3 @@
+szavak = [input("szó1: "), input("szó2: "), input("szó3: ")]
+szavak.sort()
+print(szavak)

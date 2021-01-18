@@ -1,0 +1,10 @@
+ok = True
+szam = int(input("Adj meg egy szamot: "))
+
+for i in range(szam):
+    if ok:
+        print("0", end=" ")
+        ok = False
+    else:
+        print("1", end=" ")
+        ok = True

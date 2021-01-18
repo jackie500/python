@@ -1,0 +1,7 @@
+szam = int(input("szám: "))
+
+for i in range(szam, 0, -1):
+    i = i - 1
+    if i % 3 == 0:
+
+        print(i)

@@ -1,0 +1,8 @@
+szam = int(input("szám: "))
+lista = []
+
+while szam != 0:
+    lista.append(szam)
+    szam = int(input("szám: "))
+
+print(lista[::-1])

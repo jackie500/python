@@ -1,0 +1,14 @@
+mondat = "Írj egy Python programot"
+x = mondat.split()[::-1]
+print(x)
+
+"""
+mondat = "Írj egy Python programot"
+x = mondat.split()
+
+for i in range(len(x), 0, -1):
+    i = i - 1
+
+    print(x[i], end=" ")
+
+"""

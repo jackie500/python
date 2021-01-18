@@ -1,0 +1,51 @@
+
+# gondoltam egy számra :
+
+
+from random import randint
+
+szam = randint(1, 100)
+print(szam, "(ezt a számot kell ki találnod)")
+print("Gondoltam egy számra 1 és 100 között.")
+tipp = True
+while (szam != tipp):
+    tipp = int(input("Melyik számra gondoltam? "))
+    if (tipp > szam):
+        print("Nem, ennél kisebbre gondoltam.")
+
+    elif (tipp < szam):
+        print("Nem, ennél nagyobbra gondoltam.")
+    else:
+        print("Igen, eltaláltad!")
+
+
+
+"""
+from random import randint
+
+szam = randint(1, 100)
+print(szam, "(ezt a számot kell ki találnod)")
+print("Gondoltam egy számra 1 és 100 között.")
+proba = 0
+tipp = True
+while szam != tipp:
+    tipp = int(input("Melyik számra gondoltam? "))
+    if (tipp > szam):
+        print("Nem, ennél kisebbre gondoltam.")
+        proba = proba + 1
+        if proba == 3:
+            print("vége")
+            break
+
+    elif (tipp < szam):
+        print("Nem, ennél nagyobbra gondoltam.")
+        proba = proba + 1
+        if proba == 3:
+            print("vége")
+            break
+    else:
+        print("Igen, eltaláltad!")
+"""
+
+
+# vége----------------------------------------------------------------

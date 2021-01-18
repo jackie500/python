@@ -1,0 +1,364 @@
+
+# gondoltam egy számra :
+
+
+from random import randint
+
+szam = randint(1, 100)
+print(szam, "(ezt a számot kell ki találnod)")
+print("Gondoltam egy számra 1 és 100 között.")
+tipp = True
+while (szam != tipp):
+    tipp = int(input("Melyik számra gondoltam? "))
+    if (tipp > szam):
+        print("Nem, ennél kisebbre gondoltam.")
+
+    elif (tipp < szam):
+        print("Nem, ennél nagyobbra gondoltam.")
+    else:
+        print("Igen, eltaláltad!")
+
+
+
+"""
+from random import randint
+
+szam = randint(1, 100)
+print(szam, "(ezt a számot kell ki találnod)")
+print("Gondoltam egy számra 1 és 100 között.")
+proba = 0
+tipp = True
+while szam != tipp:
+    tipp = int(input("Melyik számra gondoltam? "))
+    if (tipp > szam):
+        print("Nem, ennél kisebbre gondoltam.")
+        proba = proba + 1
+        if proba == 3:
+            print("vége")
+            break
+
+    elif (tipp < szam):
+        print("Nem, ennél nagyobbra gondoltam.")
+        proba = proba + 1
+        if proba == 3:
+            print("vége")
+            break
+    else:
+        print("Igen, eltaláltad!")
+"""
+
+
+# vége----------------------------------------------------------------
+
+
+
+
+
+
+
+
+# a mondatban hány olyan betű van amit megadok inputtal
+
+
+def myfun(mondat, karakter):
+    darabszam = 0
+    for i in range(len(mondat)):
+        if karakter == mondat[i]:
+            darabszam = darabszam + 1
+    print(darabszam)
+mondat = input("írj be egy mondatot!")
+karakter = input("adj meg egy karaktert")
+myfun(mondat, karakter)
+
+
+# beépített függvénnyel:
+"""
+mondat = input("mondat: ")
+karakter = input("írd be keresett karaktert:  ")
+count = mondat.count(karakter)
+print(count)
+
+"""
+
+
+"""
+def karakterkereso(mondat, karakter):
+    darabszam = 0
+    for i in range(len(mondat)):
+        if karakter == mondat[i]:
+            darabszam = darabszam + 1
+    return darabszam
+
+
+print(karakterkereso("mondat","a"))
+"""
+# vége----------------------------------------------------------------
+
+
+
+
+
+
+#fájl kezelés. max távot valami.txt-ből irja ki a másik fájlba eredmeny.txt-be
+
+#előrre meg kell irni a valami.txt fájlt
+
+szoveg = open("valami.txt", "r", encoding="utf-8")
+maxtav = 0
+for i in szoveg:
+    x = i.split()
+    print(x)
+    tavolsag = int(x[1])
+    if tavolsag > maxtav:
+        maxtav = tavolsag
+        varos = x[0]
+print(varos, maxtav)
+eredmeny = varos + " " + str(maxtav)
+szoveg.close()
+f = open("eredmeny.txt", "w", encoding="utf-8")
+f.write(eredmeny)
+
+#vége----------------------------------------------------
+
+
+
+
+
+
+#kiválasztás:
+
+tomb = [1,3,4,5,6,43,8,92]
+keresett = int(input('kérem a választott számot!: '))
+n = 0
+
+for ertek in tomb:
+    if ertek == keresett:
+        break
+    else:
+        n = n + 1
+if n < len(tomb):
+    print("ön a", keresett, "számot választotta, ami a", n + 1, "helyen áll.")
+else:
+    print("nincs ilyen elem")
+    keresett = int(input('kérem a válasszon egy másik számot!: '))
+
+"""
+
+tomb = [1,3,4,5,6,43,8,92]
+keresett = int(input('kerem az számot!: '))
+i = 0
+while tomb[i] != keresett and i < len(tomb)-1:
+    i = i + 1
+eredmeny = i + 1
+if eredmeny == len(tomb):
+    print("nincs talalat")
+else:
+    print(eredmeny)
+
+"""
+
+#vége--------------------------------------------------------
+
+
+
+
+
+#páros számok:
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+
+for a in lista:
+    if (a % 2 == 0):
+        print(a)
+
+#máshogy
+
+i = 1
+while i < 6:
+    print(2*i)
+    i += 1
+
+#vagy
+
+i = 0
+for i in range(1, 10, 2):
+    i += 1
+    print(i)
+
+#vége-------------------------------------------------------------
+
+
+
+
+
+
+
+# páratlan számok:
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+
+for a in lista:
+    if (a % 2 > 0):
+        print(a)
+
+#ugyan az a kettő
+
+lista = [1,2,3,4,5,6,7,8,9,10]
+
+for a in lista:
+    if (a % 2 != 0):
+        print(a)
+
+#ez is az
+
+i = 1
+while i < 5:
+    print(2*i)
+    i += 1
+#vége-----------------------------------------------------
+
+
+
+
+
+#irja ki a páros számokat 1-tol 10 ig
+a = 1
+n = 10
+while a <= n:
+    a = a + 1
+    if (a % 2 == 0):
+        print(a)
+
+#vége------------------------------------------------------
+
+
+
+
+
+
+# leggnagyobb szám vissza adása. 4 módszerrel:
+
+
+def maximum(*szamok):
+    largest = 0
+    for szam in szamok:
+        if szam > largest:
+            largest = szam
+    print(largest)
+
+n1 = int(input("n1:  "))
+n2 = int(input("n2:  "))
+n3 = int(input("n3:  "))
+maximum(n1, n2, n3)
+
+"""
+lista = []
+lista.append(int(input("n1:  ")))
+lista.append(int(input("n2:  ")))
+lista.append(int(input("n3:  ")))
+print(lista)
+
+lista.sort()
+print(lista[-1])
+
+"""
+"""
+lista = []
+lista.append(int(input("n1:  ")))
+lista.append(int(input("n2:  ")))
+lista.append(int(input("n3:  ")))
+
+largest = 0
+for i in lista:
+    if (i > largest):
+        largest = i
+print(largest)
+"""
+
+"""
+lista = []
+for i in range(3):
+    szam = int(input("szám: "))
+    lista.append(szam)
+print(max(lista))
+"""
+#vége---------------------------------------------------------
+
+
+
+#listábol a legnagyobb szám:
+
+lista = [5, 8, 20, 1, 9, 3, 6, 7]
+largest = 0
+for szam in lista:
+    if szam > largest:
+        largest = szam
+print("lista elemei: ", lista)
+print("a lista legnagyobb eleme: ", largest)
+print("a lista legnagyobb elemének indexe:", lista.index(largest))
+print("a lista legnagyobb elemének helye:", lista.index(largest)+1)
+
+#vége------------------------------------------------
+
+
+
+# henger
+
+import math
+
+
+r = float(input("sugár: "))
+m = float(input("magasság: "))
+
+V = math.pi*r**2*m
+Ta = math.pi*r**2
+Tp = 2*math.pi*r*m
+A = 2*Ta + Tp
+d = 2*r
+
+print("Térfogat:", V)
+print("Alap terület:", Ta)
+print("Palást terület:", Tp)
+print("Felszín:", A)
+print("Átmérő:", d)
+
+# kocka
+
+import math
+
+a = float(input("a oldal hossza: "))
+
+V = a**3
+A = 6 * a**2
+D = a*math.sqrt(3)
+d = a*math.sqrt(2)
+
+print("Térfogat:", V)
+print("Fekszín:", A)
+print("Testátló:", D)
+print("oldalátló:", d)
+
+#négyzet
+
+import math
+
+a = float(input("a oldal hossza: "))
+
+T = a**2
+K = 4 * a
+
+print("Terület:", T)
+print("Kerület:", K)
+
+#vége-------------------------------------------
+
+
+
+
+
+
+
+
+
+
+

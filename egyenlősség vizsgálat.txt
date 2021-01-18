@@ -1,0 +1,7 @@
+
+összeg = int(input("szám1: ")) + int(input("szám2: ")) + int(input("szám3: "))
+
+if összeg % 2 == 0:
+    print("igen")
+else:
+    print("nem")

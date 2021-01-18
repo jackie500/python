@@ -1,0 +1,21 @@
+
+#fájl kezelés. max távot valami.txt-ből irja ki a másik fájlba eredmeny.txt-be
+
+#előrre meg kell irni a valami.txt fájlt
+
+szoveg = open("valami.txt", "r", encoding="utf-8")
+maxtav = 0
+for i in szoveg:
+    x = i.split()
+    print(x)
+    tavolsag = int(x[1])
+    if tavolsag > maxtav:
+        maxtav = tavolsag
+        varos = x[0]
+print(varos, maxtav)
+eredmeny = varos + " " + str(maxtav)
+szoveg.close()
+f = open("eredmeny.txt", "w", encoding="utf-8")
+f.write(eredmeny)
+
+#vége----------------------------------------------------
